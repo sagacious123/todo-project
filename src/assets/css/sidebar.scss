@@ -1,0 +1,110 @@
+.todo-sidebar {
+  width: 414px;
+  min-height: 100vh;
+  height: 100%;
+  bottom: 0;
+  top: 0;
+  z-index: 30;
+  background-color: #f3f3f3;
+  overflow-x: hidden;
+  position: fixed;
+  left: 0px;
+  z-index: 98;
+  overflow-y: auto;
+  box-shadow: 0px 0px 7px 2px #00000040;
+
+  .todo-sidebar-header {
+    height: 123px;
+    padding: 20px 30px;
+    background-color: var(--primary-blue);
+
+    .todo-sidebar-header-container {
+      display: flex;
+      text-align: left;
+      gap: 21px;
+
+      img {
+        height: 50px;
+        width: 50px;
+      }
+
+      h3 {
+        font-size: 1rem;
+        line-height: 18.75px;
+        font-weight: 500;
+        color: var(--white);
+        text-shadow: var(--black) 0px 2px;
+        margin-bottom: 10px;
+      }
+
+      h4 {
+        font-size: 25px;
+        font-weight: 100;
+        color: var(--white);
+        text-shadow: var(--black) 0px 2px;
+        font-style: italic;
+      }
+    }
+  }
+
+  .upgrade-btn {
+    width: 100%;
+    padding: 36px 24px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    background-color: var(--upgrade-button-bg);
+    border: 2px solid var(--upgrade-button-border);
+    box-shadow: 0px 4px 0px 0px #ffffff99 inset;
+    position: relative;
+
+    span {
+      &:first-of-type {
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--secondary-button-border);
+        text-shadow: var(--white) 0px 1px;
+      }
+
+      &:nth-of-type(2) {
+        background-color: var(--secondary-button-border);
+        padding: 27px 22px;
+        color: #f2c94c;
+        position: absolute;
+        top: -2.6px;
+        right: 30px;
+      }
+    }
+  }
+
+  .todo-list {
+    padding: 20px 16px;
+
+    .todo-item {
+      box-shadow: 0px 4px 4px 0px #0000001a;
+      border: 1px solid #e7e7e7;
+      padding: 23px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+
+      .todo-item-left {
+        display: flex;
+        align-items: center;
+
+        .todo-text {
+          margin-left: 16px;
+          color: var(--secondary-button-border);
+          font-size: 16px;
+          font-weight: 500;
+          cursor: pointer;
+        }
+        .completed {
+          text-decoration: line-through;
+          color: #8d8d8d;
+        }
+      }
+    }
+  }
+}
